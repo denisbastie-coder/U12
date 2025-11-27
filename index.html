@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Arborescence de Ressources</title>
+    <!-- Chargement de Tailwind CSS pour un style moderne et responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuration de la police Inter par défaut */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9;
+        }
+        /* Style pour les cartes : une ombre plus subtile */
+        .card-link {
+            transition: all 0.3s ease;
+        }
+        .card-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <!-- Conteneur principal centré et responsive -->
+    <div id="video-links-container" class="w-full max-w-2xl bg-white shadow-2xl rounded-2xl p-6 md:p-10">
+
+        <!-- En-tête avec titre et logo -->
+        <header class="mb-8 relative flex items-start justify-between">
+            <div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-blue-800">
+                    U12 - Phases Statiques
+                </h1>
+                <p class="text-gray-300 mt-2 text-lg">
+                    Cliquez sur les titres pour ouvrir ou fermer les sections.
+                </p>
+            </div>
+            
+            <!-- Logo en haut à droite -->
+            <!-- REMPLACER CETTE URL par l'URL de votre logo -->
+            <img src="https://colomiers-rugby.com/wp-content/uploads/colomiersrugby1.png" 
+                 alt="Logo de l'entreprise" 
+                 class="w-14 h-14 rounded-lg object-cover shadow-md mt-1 sm:mt-0"
+                 onerror="this.onerror=null;this.src='https://placehold.co/80x80/9CA3AF/FFFFFF?text=Logo';"
+            >
+        </header>
+
+        <!-- Liste des liens organisée par sections (Arborescence) -->
+        <div id="links-list" class="space-y-8">
+
+
+           
+
+
+
+            <!-- ============================================== -->
+            <!-- SECTION 1 : LE PROTOCOLE D'ECHAUFFEMENT (FERMÉ PAR DÉFAUT) -->
+            <!-- ============================================== -->
+            
+            <!-- Bouton/Titre de la section cliquable -->
+            <button id="toggle-docs" onclick="toggleSection('content-docs', 'icon-docs')" 
+                class="flex justify-between items-center w-full text-left focus:outline-none pb-2 border-b-2 border-indigo-400">
+                <h2 class="text-2xl font-bold text-gray-700 m-0">
+                    📂 Protocole échauffement
+                </h2>
+                <!-- Icône : Non tournée (pointe vers la droite) car la section est fermée par défaut -->
+                <svg id="icon-docs" class="w-6 h-6 text-indigo-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            
+            <!-- Contenu de la section (CACHÉ par défaut) -->
+            <div id="content-docs" class="space-y-4 pt-0 hidden">
+                
+                <!-- Lien Document PDF -->
+                <a href="PROTOCOLE ÉCHAUFFEMENT.pdf" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-green-50 hover:border-green-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-2xl">
+                        <!-- Icône de document PDF -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            PROTOCOLE ÉCHAUFFEMENT
+                        </p>
+
+                    </div>
+                    <!-- Icône de téléchargement -->
+                    
+                </a>
+
+
+            </div>
+
+
+
+
+            <!-- ============================================== -->
+            <!-- SECTION 2 : COUP D'ENVOI (FERMÉ PAR DÉFAUT) -->
+            <!-- ============================================== -->
+            
+            <!-- Bouton/Titre de la section cliquable -->
+            <button id="toggle-docs1" onclick="toggleSection('content-docs1', 'icon-docs1')" 
+                class="flex justify-between items-center w-full text-left focus:outline-none pb-2 border-b-2 border-indigo-400">
+                <h2 class="text-2xl font-bold text-gray-700 m-0">
+                    📂 Coup d'envoi
+                </h2>
+                <!-- Icône : Non tournée (pointe vers la droite) car la section est fermée par défaut -->
+                <svg id="icon-docs1" class="w-6 h-6 text-indigo-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            
+            <!-- Contenu de la section (CACHÉ par défaut) -->
+            <div id="content-docs1" class="space-y-4 pt-0 hidden">
+                
+                <!-- Lien Document PDF -->
+                <a href="COUP D'ENVOI.pdf" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-green-50 hover:border-green-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-2xl">
+                        <!-- Icône de document PDF -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            COUP D'ENVOI
+                        </p>
+
+                    </div>
+                    <!-- Icône de téléchargement -->
+                    
+                </a>
+
+
+            </div>
+
+            <!-- ============================================== -->
+            <!-- SECTION 3 : LA TOUCHE (FERMÉ PAR DÉFAUT) -->
+            <!-- ============================================== -->
+            
+            <!-- Bouton/Titre de la section cliquable (FERMÉ par défaut) -->
+            <button id="toggle-videos" onclick="toggleSection('content-videos', 'icon-videos')" 
+                class="flex justify-between items-center w-full text-left focus:outline-none pb-2 border-b-2 border-indigo-400 mt-8">
+                <h2 class="text-2xl font-bold text-gray-700 m-0">
+                    📂 La Touche
+                </h2>
+                <!-- Icône : Non tournée (pointe vers la droite) car la section est fermée par défaut -->
+                <svg id="icon-videos" class="w-6 h-6 text-indigo-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>        
+            
+
+
+
+
+
+            <!-- Contenu de la section (CACHÉ par défaut) -->
+            <div id="content-videos" class="space-y-4 pt-0 hidden">
+                <!-- Lien Document PDF -->
+                <a href="LA TOUCHE.pdf" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-green-50 hover:border-green-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-2xl">
+                        <!-- Icône de document PDF -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            LA TOUCHE
+                        </p>
+
+                    </div>
+                    <!-- Icône de téléchargement -->
+
+                </a>
+
+                <!-- Carte de Lien Vidéo 1 (Bases) -->
+                <a href="Premier sauteur.mp4" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-indigo-50 hover:border-indigo-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-red-600 flex items-center justify-center text-white text-2xl">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.615 3.195a2.636 2.636 0 00-1.854-1.854C16.8 1 12 1 12 1s-4.8 0-5.76.341a2.636 2.636 0 00-1.854 1.854C4 4.16 4 12 4 12s0 7.84.386 8.805a2.636 2.636 0 001.854 1.854C7.2 23 12 23 12 23s4.8 0 5.76-.341a2.636 2.636 0 001.854-1.854C20 19.84 20 12 20 12s0-7.84-.385-8.805zM9.545 15.565V8.435L15.82 12l-6.275 3.565z" />
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            Premier Sauteur
+                        </p>
+                        
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+
+                <!-- Carte de Lien Vidéo 2 (Bases) -->
+                <a href="Deuxième sauteur.mp4" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-indigo-50 hover:border-indigo-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-red-600 flex items-center justify-center text-white text-2xl">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.615 3.195a2.636 2.636 0 00-1.854-1.854C16.8 1 12 1 12 1s-4.8 0-5.76.341a2.636 2.636 0 00-1.854 1.854C4 4.16 4 12 4 12s0 7.84.386 8.805a2.636 2.636 0 001.854 1.854C7.2 23 12 23 12 23s4.8 0 5.76-.341a2.636 2.636 0 001.854-1.854C20 19.84 20 12 20 12s0-7.84-.385-8.805zM9.545 15.565V8.435L15.82 12l-6.275 3.565z" />
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            Deuxième Sauteur
+                        </p>
+                        
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+
+                <!-- Carte de Lien Vidéo 3 (Bases) -->
+                <a href="Troisième sauteur.mp4" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-indigo-50 hover:border-indigo-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-red-600 flex items-center justify-center text-white text-2xl">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.615 3.195a2.636 2.636 0 00-1.854-1.854C16.8 1 12 1 12 1s-4.8 0-5.76.341a2.636 2.636 0 00-1.854 1.854C4 4.16 4 12 4 12s0 7.84.386 8.805a2.636 2.636 0 001.854 1.854C7.2 23 12 23 12 23s4.8 0 5.76-.341a2.636 2.636 0 001.854-1.854C20 19.84 20 12 20 12s0-7.84-.385-8.805zM9.545 15.565V8.435L15.82 12l-6.275 3.565z" />
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            Troisième Sauteur
+                        </p>
+                        
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+
+                <!-- Carte de Lien Vidéo 4 (Bases) -->
+                <a href="Maurice.mp4" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-indigo-50 hover:border-indigo-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-red-600 flex items-center justify-center text-white text-2xl">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.615 3.195a2.636 2.636 0 00-1.854-1.854C16.8 1 12 1 12 1s-4.8 0-5.76.341a2.636 2.636 0 00-1.854 1.854C4 4.16 4 12 4 12s0 7.84.386 8.805a2.636 2.636 0 001.854 1.854C7.2 23 12 23 12 23s4.8 0 5.76-.341a2.636 2.636 0 001.854-1.854C20 19.84 20 12 20 12s0-7.84-.385-8.805zM9.545 15.565V8.435L15.82 12l-6.275 3.565z" />
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            Maurice
+                        </p>
+                        
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+
+                <!-- Carte de Lien Vidéo 5 (Bases) -->
+                <a href="La Superbe.mp4" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-indigo-50 hover:border-indigo-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-red-600 flex items-center justify-center text-white text-2xl">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.615 3.195a2.636 2.636 0 00-1.854-1.854C16.8 1 12 1 12 1s-4.8 0-5.76.341a2.636 2.636 0 00-1.854 1.854C4 4.16 4 12 4 12s0 7.84.386 8.805a2.636 2.636 0 001.854 1.854C7.2 23 12 23 12 23s4.8 0 5.76-.341a2.636 2.636 0 001.854-1.854C20 19.84 20 12 20 12s0-7.84-.385-8.805zM9.545 15.565V8.435L15.82 12l-6.275 3.565z" />
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            La Superbe
+                        </p>
+                        
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+                
+            </div>
+            
+            <!-- ============================================== -->
+            <!-- SECTION 4 : LA MELEE (FERMÉ PAR DÉFAUT) -->
+            <!-- ============================================== -->
+            
+            <!-- Bouton/Titre de la section cliquable (FERMÉ par défaut) -->
+            <button id="toggle-extern" onclick="toggleSection('content-extern', 'icon-extern')" 
+                class="flex justify-between items-center w-full text-left focus:outline-none pb-2 border-b-2 border-indigo-400 mt-8">
+                <h2 class="text-2xl font-bold text-gray-700 m-0">
+                    📂 La Mêlée
+                </h2>
+                <!-- Icône : Non tournée (pointe vers la droite) car la section est fermée par défaut -->
+                <svg id="icon-extern" class="w-6 h-6 text-indigo-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            
+            <!-- Contenu de la section (CACHÉ par défaut) -->
+            <div id="content-extern" class="space-y-4 pt-0 hidden">
+                
+              
+                <!-- Lien Document PDF -->
+                <a href="LA MELEE.pdf" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-green-50 hover:border-green-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-2xl">
+                        <!-- Icône de document PDF -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            LA MELEE
+                        </p>
+
+                    </div>
+                    
+                </a>    
+				
+            </div>
+			
+			
+		    <!-- ============================================== -->
+            <!-- SECTION 5 : COUP FRANC (FERMÉ PAR DÉFAUT) -->
+            <!-- ============================================== -->
+            
+            <!-- Bouton/Titre de la section cliquable (FERMÉ par défaut) -->
+            <button id="toggle-section4" onclick="toggleSection('content-section4', 'icon-section4')" 
+                class="flex justify-between items-center w-full text-left focus:outline-none pb-2 border-b-2 border-indigo-400 mt-8">
+                <h2 class="text-2xl font-bold text-gray-700 m-0">
+                    📂 Coup Franc
+                </h2>
+                <!-- Icône : Non tournée (pointe vers la droite) car la section est fermée par défaut -->
+                <svg id="icon-section4" class="w-6 h-6 text-indigo-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            
+            <!-- Contenu de la section (CACHÉ par défaut) -->
+            <div id="content-section4" class="space-y-4 pt-0 hidden">
+                
+              
+                <!-- Lien Document PDF -->
+                <a href="COUP FRANC.pdf" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-green-50 hover:border-green-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-2xl">
+                        <!-- Icône de document PDF -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            COUP FRANC
+                        </p>
+
+                    </div>
+                    
+                </a>    
+				
+            </div>	
+			
+			<!-- ============================================== -->
+            <!-- SECTION 6 : REGLEMENT(FERMÉ PAR DÉFAUT) -->
+            <!-- ============================================== -->
+            
+            <!-- Bouton/Titre de la section cliquable (FERMÉ par défaut) -->
+            <button id="toggle-section5" onclick="toggleSection('content-section5', 'icon-section5')" 
+                class="flex justify-between items-center w-full text-left focus:outline-none pb-2 border-b-2 border-indigo-400 mt-8">
+                <h2 class="text-2xl font-bold text-gray-700 m-0">
+                    📂 Règlements DIGEST
+                </h2>
+                <!-- Icône : Non tournée (pointe vers la droite) car la section est fermée par défaut -->
+                <svg id="icon-section5" class="w-6 h-6 text-indigo-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            
+            <!-- Contenu de la section (CACHÉ par défaut) -->
+            <div id="content-section5" class="space-y-4 pt-0 hidden">
+                
+              
+                <!-- Lien Document PDF -->
+                <a href="c07-2025-2026-m12-touche-2-secondes.pdf" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-green-50 hover:border-green-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-2xl">
+                        <!-- Icône de document PDF -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            TOUCHE 2 SECONDES 5x5
+                        </p>
+
+                    </div>
+                    
+                </a>    
+				
+				
+				 <!-- Lien Document PDF -->
+                <a href="c08-2025-2026-m12-jouer-au-contact.pdf" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-green-50 hover:border-green-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-2xl">
+                        <!-- Icône de document PDF -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            JOUER AU CONTACT 5x5
+                        </p>
+
+                    </div>
+                    
+                </a>   
+				
+				
+					 <!-- Lien Document PDF -->
+                <a href="c09-2025-2026-m12-jeu-a-10.pdf" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-green-50 hover:border-green-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-2xl">
+                        <!-- Icône de document PDF -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            JEU A X
+                        </p>
+
+                    </div>
+                    
+                </a>   
+				
+            </div>	
+			
+			
+			
+			
+	        <!-- ============================================== -->
+            <!-- SECTION 0 : TROMBINOSCOPE) -->
+            <!-- ============================================== -->
+            
+            <!-- Bouton/Titre de la section cliquable -->
+            <button id="toggle-docs10" onclick="toggleSection('content-docs10', 'icon-docs10')" 
+                class="flex justify-between items-center w-full text-left focus:outline-none pb-2 border-b-2 border-indigo-400">
+                <h2 class="text-2xl font-bold text-gray-700 m-0">
+                    📂 Trombinoscope U12
+                </h2>
+                <!-- Icône : Non tournée (pointe vers la droite) car la section est fermée par défaut -->
+                <svg id="icon-docs10" class="w-6 h-6 text-indigo-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            
+            <!-- Contenu de la section (CACHÉ par défaut) -->
+            <div id="content-docs10" class="space-y-4 pt-0 hidden">
+                
+                <!-- Lien Document PDF -->
+                <a href="U12-2014-2015 Saison 2025-2026.pdf" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-green-50 hover:border-green-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-2xl">
+                        <!-- Icône de document PDF -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-indigo-600">
+                            TROMBINOSCOPE U12
+                        </p>
+
+                    </div>
+                    <!-- Icône de téléchargement -->
+                    
+                </a>
+
+
+            </div>		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			                       
+        </div>
+
+
+        <footer class="text-center mt-10 pt-6 border-t border-gray-100">
+            <p class="text-sm text-gray-400">
+                Structure mise à jour le 27/11/2025.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        /**
+         * Fonction pour ouvrir et fermer les sections.
+         * Elle ajoute/retire la classe 'hidden' et fait pivoter l'icône.
+         * @param {string} contentId L'ID du div de contenu à masquer/afficher (e.g., 'content-docs')
+         * @param {string} iconId L'ID de l'icône flèche à faire pivoter (e.g., 'icon-docs')
+         */
+        function toggleSection(contentId, iconId) {
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById(iconId);
+
+            // 1. Masquer ou afficher le contenu
+            content.classList.toggle('hidden');
+
+            // 2. Faire pivoter l'icône (90 degrés = ouvert, 0 degrés = fermé)
+            if (content.classList.contains('hidden')) {
+                // Si le contenu est masqué, l'icône pointe vers la droite (0 degrees)
+                icon.classList.remove('rotate-90');
+            } else {
+                // Si le contenu est visible, l'icône pointe vers le bas (90 degrees)
+                icon.classList.add('rotate-90');
+            }
+        }
+    </script>
+</body>
+</html>
