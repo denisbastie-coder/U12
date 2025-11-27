@@ -479,14 +479,52 @@
 
 
             </div>		
+
+
 			
+			<!-- ============================================== -->
+            <!-- SECTION x : LIENS UTILES (AVEC LIEN GOOGLE DRIVE) -->
+            <!-- ============================================== -->
+            
+            <!-- Bouton/Titre de la section cliquable (FERMÉ par défaut) -->
+            <button id="toggle-section40" onclick="toggleSection('content-section40', 'icon-section40')" 
+                class="flex justify-between items-center w-full text-left focus:outline-none pb-2 border-b-2 border-indigo-400 mt-8">
+                <h2 class="text-2xl font-bold text-gray-700 m-0">
+                    ☁️ Liens utiles
+                </h2>
+                <!-- Icône : Non tournée (pointe vers la droite) car la section est fermée par défaut -->
+                <svg id="icon-section40" class="w-6 h-6 text-indigo-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            
+            <!-- Contenu de la section (CACHÉ par défaut) -->
+            <div id="content-section40" class="space-y-4 pt-0 hidden">
+
+
+                                <!-- LIEN VERS GOOGLE SITE OU AUTRE SITE GOOGLE -->
+                <a href="https://colomiers-rugby.com/" target="_blank" rel="noopener noreferrer"
+                   class="card-link group flex items-center p-4 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 hover:border-gray-400">
+                    <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-blue-600 flex items-center justify-center text-white text-2xl">
+                        <!-- Icône pour Google Site (Page Web) -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <p class="text-lg font-semibold text-gray-700 group-hover:text-blue-600">
+                            colomiers-rugby.com
+                        </p>
+
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+				
+            </div>	
 			
-			
-			
-			
-			
-			
-			
+						
 			
 			
 			
@@ -529,5 +567,6 @@
 </body>
 
 </html>
+
 
 
